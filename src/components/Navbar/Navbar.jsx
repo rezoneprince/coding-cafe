@@ -1,10 +1,11 @@
 import React from 'react';
 import HeaderImg from '../../images/giphy.gif';
+import './Navbar.css'
 
 const Navbar = () => {
     return (
-        <div>
-             <div className="navbar bg-base-100">
+        <div className='navbar-container'>
+             <div className="navbar px-28">
                   <div className="flex-1">
                     <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
                   </div>
