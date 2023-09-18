@@ -1,4 +1,15 @@
 .product-container img{
-    width: 500px;
+    width: 700px;
+    height: 400px;
     padding: 10px;
+}
+.owner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-owner img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
