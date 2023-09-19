@@ -1,6 +1,6 @@
 .product-container img{
-    width: 700px;
-    height: 400px;
+    width: 100%;
+    height: 500px;
     padding: 10px;
 }
 .owner {

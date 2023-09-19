@@ -24,7 +24,7 @@ const Shop = () => {
            </div>
 
 
-            <div className='purchase-product mr-36'>
+            <div className='purchase-product mx-28'>
                 <h2>Book mark blogs</h2>
             </div>
         </div>
