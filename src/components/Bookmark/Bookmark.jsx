@@ -9,7 +9,7 @@ const Bookmark = ({bookmarks}) => {
     }
 
     return (
-        <div>
+        <div className='px-4'>
              <div>
                 <h4>Spent Time On Read:{newRedTime}</h4>
             </div>

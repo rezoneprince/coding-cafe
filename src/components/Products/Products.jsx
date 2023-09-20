@@ -29,7 +29,7 @@ const Products = (props) => {
                 <p className='text-xl font-bold'>{title}</p>
                 <p className='text-xs text-gray-500'>{hashTag}</p>
             </div>
-            <button onClick={()=>handleAddToCart(props.product)} className='ml-3 border-b-2'>Mark As Read</button>
+            <button onClick={()=>handleAddToCart(redTime)} className='ml-3 border-b-2'>Mark As Read</button>
         
             
         </div>
