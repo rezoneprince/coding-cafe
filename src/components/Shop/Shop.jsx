@@ -7,7 +7,8 @@ const Shop = () => {
     
     const [products, setProducts] = useState([]);
     const [bookmarks, setBookmarks] = useState([]);
-   
+    const [addTimes,setAddTimes] = useState(0);
+
 
     useEffect(()=>{
         fetch('data.json')
@@ -20,6 +21,10 @@ const Shop = () => {
         setBookmarks(addCart);
     }
 
+    const handleAddToTime = (newTime) =>{
+        const addAllTime = addTimes + newTime;
+        setAddTimes(addAllTime)
+    }
    
     return (
         <div className='shop'>
@@ -28,6 +33,7 @@ const Shop = () => {
                 products.map(product=><Products
                     product={product}
                     handleAddToCart={handleAddToCart}
+                    handleAddToTime={handleAddToTime}
                     key={product.id}
                     ></Products> )
             }
@@ -36,7 +42,7 @@ const Shop = () => {
 
             <div className='purchase-product mx-28'>
                 {
-                    <Bookmark bookmarks={bookmarks}></Bookmark>
+                    <Bookmark bookmarks={bookmarks} addTimes={addTimes}></Bookmark>
                 }
             </div>
            

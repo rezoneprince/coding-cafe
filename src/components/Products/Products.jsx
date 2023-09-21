@@ -5,7 +5,11 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 
 const Products = (props) => {
     const {picture,name,userImg,redTime,date,title,hashTag} = props.product;
+
     const {handleAddToCart} = props;
+
+    const {handleAddToTime} = props;
+
 
     return (
         <div className='product-container py-2'>
@@ -29,8 +33,8 @@ const Products = (props) => {
                 <p className='text-xl font-bold'>{title}</p>
                 <p className='text-xs text-gray-500'>{hashTag}</p>
             </div>
-            <button onClick={()=>handleAddToCart(redTime)} className='ml-3 border-b-2'>Mark As Read</button>
-        
+            <button onClick={()=> handleAddToTime(props.product.redTime)} className='ml-3 border-b-2'>Mark As Read</button>
+    
             
         </div>
     );
