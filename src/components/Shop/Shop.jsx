@@ -37,7 +37,7 @@ const Shop = () => {
         ))}
       </div>
 
-      <div className="purchase-product mx-28 w-2/4 gap-5">
+      <div className="purchase-product ml-60 w-2/4 gap-5">
         {<Bookmark bookmarks={bookmarks} addTimes={addTimes}></Bookmark>}
       </div>
     </div>
