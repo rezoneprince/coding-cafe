@@ -39,12 +39,12 @@ const Shop = () => {
           ))}
         </div>
 
-        <div className="purchase-product ml-60 w-2/4 gap-5">
+        <div className="purchase-product ml-28 w-2/4 gap-5">
           {<Bookmark bookmarks={bookmarks} addTimes={addTimes}></Bookmark>}
         </div>
       </div>
 
-      <div className="px-64 mt-20">{<Blog></Blog>}</div>
+      <div className="mt-20">{<Blog></Blog>}</div>
     </div>
   );
 };
