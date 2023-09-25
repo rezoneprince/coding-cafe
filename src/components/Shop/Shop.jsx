@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Products from "../Products/Products";
 import "./Shop.css";
 import Bookmark from "../Bookmark/Bookmark";
+import Blog from "../Blog/Blog";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -25,21 +26,25 @@ const Shop = () => {
   };
 
   return (
-    <div className="shop grid md:grid-cols-2 gap-2">
-      <div className="shop-container md:ml-36 w-11/12">
-        {products.map((product) => (
-          <Products
-            product={product}
-            handleAddToCart={handleAddToCart}
-            handleAddToTime={handleAddToTime}
-            key={product.id}
-          ></Products>
-        ))}
+    <div>
+      <div className="shop grid md:grid-cols-2 gap-2">
+        <div className="shop-container md:ml-36 w-11/12">
+          {products.map((product) => (
+            <Products
+              product={product}
+              handleAddToCart={handleAddToCart}
+              handleAddToTime={handleAddToTime}
+              key={product.id}
+            ></Products>
+          ))}
+        </div>
+
+        <div className="purchase-product ml-60 w-2/4 gap-5">
+          {<Bookmark bookmarks={bookmarks} addTimes={addTimes}></Bookmark>}
+        </div>
       </div>
 
-      <div className="purchase-product ml-60 w-2/4 gap-5">
-        {<Bookmark bookmarks={bookmarks} addTimes={addTimes}></Bookmark>}
-      </div>
+      <div className="px-64 mt-20">{<Blog></Blog>}</div>
     </div>
   );
 };
