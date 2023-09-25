@@ -3,7 +3,7 @@ import AddTitle from "../AddTitle/AddTitle";
 
 const Bookmark = ({ bookmarks, addTimes }) => {
   return (
-    <div>
+    <div className="px-2">
       <div>
         <h4>Spent Time On Read:{addTimes}</h4>
       </div>
